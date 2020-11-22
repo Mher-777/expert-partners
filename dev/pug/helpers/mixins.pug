@@ -1,0 +1,13 @@
+mixin icon(name,mod)
+	mixin icon(name,mod)
+		- mod = mod || ''
+		svg(class="icon icon-" + name + ' ' + mod)
+			use(xlink:href="static/images/sprite/symbol/sprite.svg#" + name)
+
+mixin picture(path, name, type, id)
+	picture
+		each val in type
+			source(srcset=path + "/" + name + "." + val type="image/" + val)
+		img(src=path + "/" + name + "." + type[2] alt=name class=id)
+
+//+picture('static/images/content/slider', 'main-image', ['webp', 'png', 'svg'], 'slider__pic')
