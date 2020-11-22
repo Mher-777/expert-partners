@@ -1,8 +1,9 @@
-.section-title {
+.title {
   font-family: 'Futura New', Roboto, sans-serif;
   font-weight: 600;
   display: block;
   text-transform: uppercase;
+  color: var(--color-black);
   &--color {
     &-yellow {
       color: var(--color-yellow);
@@ -13,34 +14,60 @@
       font-size: 55px;
       line-height: 76px;
     }
+    &-small {
+      font-size: 50px;
+      line-height: 69px;
+    }
   }
 }
 @media (max-width: 1000px) {
-  .section-title {
+  .title {
     &--size {
       &-big {
         font-size: 50px;
-        line-height: 65px;
+        line-height: 55px;
+      }
+      &-small {
+        font-size: 45px;
+        line-height: 50px;
       }
     }
   }
 }
 @media (max-width: 700px) {
-  .section-title {
+  .title {
     &--size {
       &-big {
         font-size: 40px;
-        line-height: 48px;
+        line-height: 45px;
+      }
+      &-small {
+        font-size: 30px;
+        line-height: 33px;
       }
     }
   }
 }
 @media (max-width: 400px) {
-  .section-title {
+  .title {
     &--size {
       &-big {
         font-size: 35px;
-        line-height: 42px;
+        line-height: 35px;
+      }
+      &-small {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 340px) {
+  .title {
+    &--size {
+      &-big {
+        font-size: 33px;
+        line-height: 33px;
       }
     }
   }
