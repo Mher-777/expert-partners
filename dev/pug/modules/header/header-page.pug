@@ -1,0 +1,26 @@
+header.header.header--gray
+  .container
+    .header__inner
+      .header__left
+        button(type="button").hamburger.header__hamburger
+          +icon('burger', 'hamburger-icon')
+        nav.menu
+          ul.menu__list
+            li.menu__item
+              a(href="#").menu__link Біз жайлы
+            li.menu__item
+              a(href="#").menu__link эксперттер
+            li.menu__item
+              a(href="#").menu__link курстар
+            li.menu__item
+              a(href="#").menu__link байланыс
+      .header__right
+        a(href="#").header__right-link
+          +icon('home', 'header__icon')
+        a(href="#").header__right-link
+          +icon('seeing', 'header__icon')
+        a(href="#").header__right-logo
+          +picture('static/images/common', 'logo-web', ['webp', 'png'], 'header__right-pic')
+        .header__user
+          +icon('user', 'header__icon')
+          span.header__user-name Имя пользователя

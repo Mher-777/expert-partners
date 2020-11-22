@@ -1,0 +1,22 @@
+header.header.header--position
+  .container
+    .header__inner
+      .header__left
+        button(type="button").hamburger.header__hamburger
+          +icon('burger', 'hamburger-icon')
+        .logo.header__logo
+          a(href="#").logo__link
+            +picture('static/images/common', 'logo', ['webp', 'png'], 'logo__image')
+        nav.menu(data-da="menu-mobile, last, 700")
+          ul.menu__list
+            li.menu__item
+              a(href="#").menu__link Біз жайлы
+            li.menu__item
+              a(href="#").menu__link эксперттер
+            li.menu__item
+              a(href="#").menu__link курстар
+            li.menu__item
+              a(href="#").menu__link байланыс
+      .header__right
+        a(href="#").header__user
+          +icon('user', 'header__icon')

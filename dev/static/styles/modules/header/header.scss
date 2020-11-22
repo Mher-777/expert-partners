@@ -1,1 +1,57 @@
 header { flex: 0 0 auto; }
+.hamburger {
+  max-width: 30px;
+  height: 30px;
+  fill: var(--color-white);
+  display: none;
+}
+.logo {
+  max-width: 120px;
+  &__link {
+    vertical-align: middle;
+  }
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  top: 30px;
+  color: var(--color-white);
+  transition: all linear .2s;
+  &--gray {
+    background-color: var(--color-tuatara);
+  }
+  &--sticky {
+    background-color: var(--color-tuatara);
+    padding: 20px 0;
+    box-shadow: 0 7px 7px rgba(0, 0, 0, 0.3);
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &__icon {
+    fill: var(--color-white)
+  }
+}
+@media (max-width: 700px) {
+  .header__hamburger {
+    display: block;
+  }
+  .header__logo {
+    display: none;
+  }
+
+}

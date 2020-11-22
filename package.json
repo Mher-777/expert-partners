@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "normalize.css": "^8.0.1",
-    "svg4everybody": "^2.1.9"
+    "svg4everybody": "^2.1.9",
+    "swiper": "^6.3.5"
   }
 }

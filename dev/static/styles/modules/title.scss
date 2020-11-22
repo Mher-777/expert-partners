@@ -1,0 +1,47 @@
+.section-title {
+  font-family: 'Futura New', Roboto, sans-serif;
+  font-weight: 600;
+  display: block;
+  text-transform: uppercase;
+  &--color {
+    &-yellow {
+      color: var(--color-yellow);
+    }
+  }
+  &--size {
+    &-big {
+      font-size: 55px;
+      line-height: 76px;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .section-title {
+    &--size {
+      &-big {
+        font-size: 50px;
+        line-height: 65px;
+      }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .section-title {
+    &--size {
+      &-big {
+        font-size: 40px;
+        line-height: 48px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .section-title {
+    &--size {
+      &-big {
+        font-size: 35px;
+        line-height: 42px;
+      }
+    }
+  }
+}

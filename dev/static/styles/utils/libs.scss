@@ -1,1 +1,6 @@
 @import "../../../../node_modules/normalize.css/normalize";
+@import "../../../../node_modules/swiper/swiper.scss";
+.swiper-slide {
+  height: 200px;
+  background-color: red;
+}

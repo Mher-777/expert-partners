@@ -1,0 +1,110 @@
+.menu {
+  margin-left: 40px;
+  &-mobile {
+    display: none;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    margin-right: 75px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__link {
+    position: relative;
+    transition: all linear .2s;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      background-color: var(--color-white);
+      height: 1px;
+      width: 0;
+      left: 0;
+      transition: all linear .2s;
+    }
+    &:hover {
+      color: var(--color-yellow);
+      &::before {
+        width: 100%;
+        background-color: var(--color-yellow);
+      }
+    }
+  }
+}
+@media (max-width: 972px) {
+  .menu__item {
+    margin-right: 40px;
+  }
+}
+@media (max-width: 700px) {
+  .menu-mobile {
+    display: block;
+    max-width: 300px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    transform: translateX(-100%);
+    top: 0;
+    background-color: red;
+    height: 100vh;
+    z-index: 1000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all linear .2s;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: hard-light;
+      background-color: var(--color-accent);
+      z-index: -1;
+      left: 0;
+      top: 0;
+    }
+    &__header {
+      background-color: var(--color-accent);
+      padding: 7px 20px;
+      mix-blend-mode: hard-light;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0 -20px;
+    }
+    &__logo {
+      max-width: 80px;
+      margin-right: 30px;
+    }
+    &__hamburger {
+      display: block;
+    }
+    &.is-open {
+      transform: translateX(0);
+    }
+  }
+  .menu {
+    margin-left: 0;
+    &__list {
+      display: block;
+      margin-top: 30px;
+    }
+    &__item {
+      color: var(--color-white);
+      margin-bottom: 15px;
+      margin-right: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__link {
+      width: 125px;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+.menu-mobile(data-bg="static/images/content/menu/menu-bg.jpg" data-bg-webp="static/images/content/menu/menu-bg.webp")
+  .menu-mobile__header
+    .logo.menu-mobile__logo
+      a(href="#").logo__link
+        +picture('static/images/common', 'logo', ['webp', 'png'], 'logo__image')
+    button(type="button").hamburger.menu-mobile__hamburger
+      +icon('burger', 'hamburger-icon')
