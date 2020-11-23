@@ -1,0 +1,22 @@
+extends layout/personal
+
+block variables
+    -var title = 'Подписка'
+
+block content
+  section.subscription
+    .container
+      .section-top
+        h2.subscription__title.title.title--size-small.title--color-accent Подписка
+        .info.info--bg-gray
+          +picture('static/images/common', 'user-yellow', ['webp', 'png'], 'info__pic')
+          .info__content
+            span.info__name
+              +icon('user', 'info__icon')
+              | Имя эксперта
+            p.info__text Курс басталуынан бастап
+              | 4 ай аралығында сізде барлық
+              |  сабақтарға доступ болады
+      .subscription__content
+        h3.subscription__subtitle Құрметті Expert Partners Cтуденті!
+        p.subscription__text Қазір Сізде ешқандай жазылу (подписка) жоқ.
