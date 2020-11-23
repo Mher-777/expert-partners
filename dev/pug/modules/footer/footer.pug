@@ -1,0 +1,59 @@
+footer.footer
+  .footer__top
+    .container
+      .footer__row
+        .footer__col
+          h3.footer__title Байланыс жолдары
+          ul.footer__list
+            li.footer__item
+              a(href="#").footer__item-link
+                +icon('marker', 'footer__item-icon')
+                span.footer__item-text Алматы қаласы, Тулебаева 38|61
+            li.footer__item
+              a(href="tel:+87751510539").footer__item-link
+                +icon('phone', 'footer__item-icon')
+                span.footer__item-text 8 775 151 05 39
+            li.footer__item
+              a(href="mailto:expert.partners1@gmail.com").footer__item-link
+                +icon('envelope', 'footer__item-icon')
+                span.footer__item-text expert.partners1@gmail.com
+        .footer__col.footer__col--menu
+          ul.footer__list
+            li.footer__item
+              a(href="#").footer__item-link Біз жайлы
+            li.footer__item
+              a(href="#").footer__item-link Эксперттер
+            li.footer__item
+              a(href="#").footer__item-link Курстар
+            li.footer__item
+              a(href="#").footer__item-link Байланыс
+        .footer__col
+          h3.footer__title Реквизиттер
+          ul.footer__list
+            li.footer__item Алматы қаласы, Тулебаева 38|61
+            li.footer__item БИН: 201040029983
+            li.footer__item Текущий счет: KZ449470398993147128
+            li.footer__item АО "Альфа-Банк"
+        .newsletter(data-da="footer, first, 810").footer__col
+          h3.newsletter__title Басты жаңалықтар мен ұсыныстарды
+            | <br> бірінші болып біл!
+          p.newsletter__text Электрондық почта сілтемесіне жазылыңыз. Біз спам емес,
+            | <br> сіз үшін құнды ақпараттарды ғана жолдаймыз
+          form(action="#").newsletter__form
+            input(type="email" placeholder="username@gmail.com" required).newsletter__input
+            button(type="submit").newsletter__btn.btn.btn--color-black Жазылу
+  .footer__bottom
+    .container
+      .footer__bottom-inner
+        .socials(data-da="footer, first, 810")
+          +picture('static/images/common', 'logo-black', ['webp', 'png'], 'socials__logo')
+          .socials__icons
+            a(href="#").socials__link
+              +icon('whatsapp', 'socials__icon')
+            a(href="#").socials__link
+              +icon('instagram', 'socials__icon')
+            a(href="#").socials__link
+              +icon('telegram', 'socials__icon')
+        .footer__copyright
+          +icon('copyright', 'footer__copyright-icon')
+          span.footer__copyright-text Барлық құқықтар сақталған/2020

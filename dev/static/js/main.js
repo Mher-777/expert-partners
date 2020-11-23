@@ -62,7 +62,7 @@ $(function () {
             slidesPerView: 3,
             slidesPerGroup: 3,
             spaceBetween: 25,
-            // autoHeight: true,
+            speed: 600,
             navigation: {
                 nextEl: '.team__slider-arrow--next',
                 prevEl: '.team__slider-arrow--prev',
@@ -129,17 +129,14 @@ $(function () {
                     spaceBetween: 25,
 
                 },
-                // 640: {
-                //
-                // }
             }
         });
-        // $(window).bind('resize', function (e) {
-        //     if (window.RT) clearTimeout(window.RT);
-        //     window.RT = setTimeout(function () {
-        //         slider.update()
-        //     }, 200);
-        // });
+        $(window).bind('resize', function (e) {
+            if (window.RT) clearTimeout(window.RT);
+            window.RT = setTimeout(function () {
+                slider.update()
+            }, 200);
+        });
     }
     teamSlider()
 })
