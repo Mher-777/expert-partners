@@ -1,0 +1,29 @@
+extends layout/personal
+
+block variables
+	-var title = 'КУрстың атауы'
+
+block content
+	section.courses.courses--gray.courses--padding
+		.container
+			.section-top
+				h2.courses__title.title.title--size-small.title--color-accent КУрстың атауы
+				.info.info--bg-gray
+					+picture('static/images/common', 'user-yellow', ['webp', 'png'], 'info__pic')
+					.info__content
+						span.info__name
+							+icon('user', 'info__icon')
+							| Имя эксперта
+						p.info__text Курс басталуынан бастап
+							| 4 ай аралығында сізде барлық
+							|	сабақтарға доступ болады
+			.courses__content
+				a(href="#").courses__box
+					span.courses__box-divide.divide.divide--bg-purple(data-mobile="статус") Cтатус урока
+					h3.courses__subtitle Cабақ атауы
+				a(href="#").courses__box
+					span.courses__box-divide.divide.divide--bg-purple(data-mobile="статус") Cтатус урока
+					h3.courses__subtitle Cабақ атауы
+				a(href="#").courses__box
+					span.courses__box-divide.divide.divide--bg-purple(data-mobile="статус") Cтатус урока
+					h3.courses__subtitle Cабақ атауы

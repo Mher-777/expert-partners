@@ -8,6 +8,9 @@
     &-yellow {
       color: var(--color-yellow);
     }
+    &-accent {
+      color: var(--color-accent);
+    }
   }
   &--size {
     &-big {
@@ -42,8 +45,18 @@
         line-height: 45px;
       }
       &-small {
-        font-size: 30px;
-        line-height: 33px;
+        font-size: 25px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .title {
+    &--size {
+      &-small {
+        font-size: 20px;
+        line-height: 24px;
       }
     }
   }

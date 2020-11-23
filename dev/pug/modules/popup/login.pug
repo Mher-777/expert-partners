@@ -1,0 +1,22 @@
+.login#login(style="display: none;")
+  .login__wrapper
+    +picture('static/images/common', 'logo', ['webp', 'png'], 'login__logo')
+    .login__box
+      h3.login__title Қош келдіңіз!
+      form(action="/").login__form
+        span.login__subtitle Кіру
+        label.control
+          +icon('user', 'control__icon')
+          input(type="email" placeholder="Email" required).input.control__input
+        label.control
+          +icon('key', 'control__icon')
+          input(type="password" placeholder="Пароль" required).input.control__input
+        .login__row
+          label.checkbox
+            span.checkbox__text Парольді сақтау
+            input(type="checkbox" checked)
+            span.checkbox__custom
+          a(href="reset-password.html").link.login__link Парольді ұмыттыңыз ба?
+        button(type="submit").login__btn.btn.btn--color-white Кіру
+        span.login__text Егер тіркелген аккаунт паракшаныз жок болса,
+          a(href="authorization.html").link Тіркелу

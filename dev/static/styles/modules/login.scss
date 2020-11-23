@@ -1,0 +1,127 @@
+.login-page {
+  &__bg {
+    background-color: var(--color-accent);
+    padding-top: 164px;
+    padding-bottom: 90px;
+  }
+}
+.login {
+  max-width: 505px;
+  box-shadow: 0px 0px 16px rgba(250, 246, 246, 0.55);
+  border-radius: 30px;
+  width: 100%;
+  padding: 35px 20px;
+  overflow: visible;
+  background-color: #F1EFEF;
+  margin: 0 auto;
+  &__title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-bottom: 35px;
+  }
+  &__box {
+    max-width: 380px;
+    margin: 0 auto;
+    padding-top: 35px;
+  }
+  &__logo {
+    margin-top: -92px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+    max-width: 120px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -5px;
+
+  }
+  &__btn {
+    display: block;
+    margin-top: 20px;
+    max-width: 215px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__text {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    line-height: 16px;
+    a {
+      margin-left: 5px;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    &--size {
+      &-small {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 14px;
+        color: #0C0C0C;
+      }
+    }
+  }
+}
+@media (max-width: 810px) {
+  .login-page__bg {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 600px) {
+  .close {
+    top: 10px;
+    right: 10px;
+    svg {
+      fill: var(--color-accent)
+    }
+  }
+}
+@media (max-width: 600px) {
+  .login-page {
+    .login {
+      max-width: 100%;
+      border-radius: 0;
+      background-color: transparent;
+    }
+    .login__title {
+      display: none;
+    }
+  }
+}
+@media (max-width: 400px) {
+  .login__title {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .login__subtitle {
+    font-size: 12px;
+    line-height: 16px;
+    &--size {
+      &-small {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
+  .login__text {
+    font-size: 10px;
+    line-height: 12px;
+    margin-top: 13px;
+  }
+  .login__btn {
+    max-width: 175px;
+  }
+}

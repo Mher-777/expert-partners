@@ -85,7 +85,15 @@ input {
   height: 100%;
 }
 
-.content { flex: 1 0 auto; }
+.content {
+  flex: 1 0 auto;
+  background-color: #F4F4F4;
+  &--margin {
+    &-top {
+      margin-top: 64px;
+    }
+  }
+}
 
 .container {
   margin: 0 auto;
@@ -93,6 +101,29 @@ input {
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+}
+.section-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 550px) {
+  .content {
+    &--margin {
+      &-top {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .content {
+    &--margin {
+      &-top {
+        margin-top: 88px;
+      }
+    }
+  }
 }
 @media (max-width: 340px) {
   .container {

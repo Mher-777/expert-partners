@@ -1,3 +1,133 @@
 .input {
-
+  display: block;
+}
+.control {
+  display: block;
+  position: relative;
+  box-shadow: 0px 4px 4px rgba(250, 246, 246, 0.25), 0px 4px 4px rgba(250, 246, 246, 0.25);
+  border-radius: 10px;
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-white);
+  margin-bottom: 15px;
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    fill: var(--color-accent);
+    width: 20px;
+    height: 20px;
+  }
+  &__input {
+    width: calc(100% - 50px);
+    margin-left: auto;
+    padding: 13px 15px;
+    border-left: 1px solid var(--color-accent);
+    &::placeholder {
+      color: #B5B3AF;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 24px;
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+  &--empty {
+    .control__input {
+      width: calc(100% - 10px);
+      border: none;
+    }
+  }
+}
+.checkbox {
+  cursor: pointer;
+  display: block;
+  padding-left: 28px;
+  position: relative;
+  user-select: none;
+  input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    transform: scale(0);
+    &:checked {
+      & ~ .checkbox__custom {
+        &:after {
+          display: block;
+        }
+      }
+    }
+  }
+  &__custom {
+    border: 1px solid var(--color-accent);
+    border-radius: 5px;
+    left: 0;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    width: 20px;
+    &:after {
+      content: '';
+      border: solid #000000;
+      border-width: 0 2px 2px 0;
+      display: none;
+      height: 12px;
+      left: 6px;
+      position: absolute;
+      top: 1px;
+      transform: rotate(45deg);
+      width: 7px;
+    }
+  }
+  &__text {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+    display: inline-block;
+  }
+}
+@media (max-width: 400px) {
+  .control {
+    margin-bottom: 10px;
+  }
+  .control__input {
+    padding: 13px 10px;
+    font-size: 9px;
+    line-height: 11px;
+    width: calc(100% - 40px);
+    &::placeholder {
+      font-size: 9px;
+      line-height: 11px;
+    }
+  }
+  .control__icon {
+    width: 15px;
+    height: 15px;
+    left: 13px;
+  }
+  .checkbox__custom {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    top: -1px;
+    &::after {
+      height: 10px;
+      left: 5px;
+      top: 0;
+      width: 5px;
+    }
+  }
+  .checkbox {
+    padding-left: 20px;
+    font-size: 10px;
+    line-height: 12px;
+  }
+  .checkbox__text {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 500;
+  }
 }

@@ -1,0 +1,51 @@
+extends layout/personal
+
+block variables
+	-var title = 'менің курстарым'
+
+block content
+	section.courses.courses--white.courses--padding
+		.container
+			.section-top
+				h2.courses__title.title.title--size-small.title--color-accent менің курстарым
+				.info.info--bg-gray
+					+picture('static/images/common', 'user-yellow', ['webp', 'png'], 'info__pic')
+					.info__content
+						span.info__name
+							+icon('user', 'info__icon')
+							| Имя эксперта
+						p.info__text Курс басталуынан бастап
+							| 4 ай аралығында сізде барлық
+							|	сабақтарға доступ болады
+			.courses__row
+				a(href="course-list.html").courses__col.courses__col--shadow
+					.courses__main
+						.courses__head
+							+picture('static/images/content/courses', 'courses-1', ['webp', 'png'], 'courses__image')
+						.courses__body
+							.courses__info
+								h3.courses__name Rich Style
+								.courses__category.divide.divide--bg-purple Курс
+							ul.courses__list
+								li.courses__item
+									+icon('user', 'courses__item-icon')
+									span.courses__item-text Айжұлдыз Адайбекова
+								li.courses__item.courses__item--color-gray
+									+icon('pen', 'courses__item-icon')
+									span.courses__item-text Қымбат LOOK-ті арзан бағада
+										| тігуді Айжұлдызбен бірге үйрен!
+				a(href="course-list.html").courses__col.courses__col--shadow
+					.courses__main
+						.courses__head
+							+picture('static/images/content/courses', 'courses-2', ['webp', 'png'], 'courses__image')
+						.courses__body
+							.courses__info
+								h3.courses__name Teleport PRO Max
+								.courses__category.divide.divide--bg-purple Курс
+							ul.courses__list
+								li.courses__item
+									+icon('user', 'courses__item-icon')
+									span.courses__item-text Асхат Шынәлі
+								li.courses__item.courses__item--color-gray
+									+icon('pen', 'courses__item-icon')
+									span.courses__item-text Әдемі де сапалы видео түсіруді үйрен де, мобилографияны табыс көзіне айналдыр!

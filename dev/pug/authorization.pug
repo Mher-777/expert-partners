@@ -1,0 +1,34 @@
+extends layout/login
+
+block variables
+    -var title = 'артқа оралу'
+
+block content
+  .login-page
+    .login-page__bg
+      .container
+        .login(data-da="login-page, last, 600")
+          .login__wrapper
+            +picture('static/images/common', 'logo', ['webp', 'png'], 'login__logo')
+            .login__box
+              h3.login__title Қош келдіңіз!
+              form(action="/").login__form
+                span.login__subtitle Тіркелу
+                label.control
+                  +icon('user', 'control__icon')
+                  input(type="text" placeholder="Аты-жөні" required).input.control__input
+                label.control
+                  +icon('envelope', 'control__icon')
+                  input(type="email" placeholder="Email немете номер телефоныныз" required).input.control__input
+                label.control
+                  +icon('key', 'control__icon')
+                  input(type="password" placeholder="Пароль" required).input.control__input
+                label.control
+                  +icon('key', 'control__icon')
+                  input(type="password" placeholder="Парольді қайталау" required).input.control__input
+                .login__row
+                  label.checkbox
+                    span.checkbox__text Парольді сақтау
+                    input(type="checkbox" checked)
+                    span.checkbox__custom
+                button(type="submit").login__btn.btn.btn--size-small.btn--color-white Растау

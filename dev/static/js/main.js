@@ -23,7 +23,19 @@ window.onload = function () {
         }
     }
 };
+function calcScroll() {
+    let div = document.createElement('div')
+    div.style.width = '50px';
+    div.style.height = '50px';
+    div.style.overflowY = 'scroll';
+    div.style.visibility = 'hidden';
 
+    document.body.appendChild(div);
+    let scrollWidth = div.offsetWidth - div.clientWidth;
+    div.remove();
+
+    return scrollWidth;
+}
 
 $(function () {
     svg4everybody();
@@ -46,7 +58,7 @@ $(function () {
         })
         function responsiveMenu() {
             const w = $(window).width()
-            if (w >= 700) {
+            if (w >= 700 && !menu.hasClass('menu-personal')) {
                 menu.removeClass('is-open')
             }
         }
@@ -131,28 +143,74 @@ $(function () {
                 },
             }
         });
-        $(window).bind('resize', function (e) {
-            if (window.RT) clearTimeout(window.RT);
-            window.RT = setTimeout(function () {
-                slider.update()
-            }, 200);
-        });
     }
     teamSlider()
+    const popup = () => {
+        const header = $('.header__inner')
+        const dataFancybox = $('[data-fancybox]');
+        dataFancybox.fancybox({
+            keyboard: true,
+            image: {
+                preload: true
+            },
+            infobar: false,
+            btnTpl: {
+                smallBtn: '<button type="button" data-fancybox-close class="close" title="{{CLOSE}}">' +
+                    '<svg class="icon icon-close "><use xlink:href="static/images/sprite/symbol/sprite.svg#close"></use></svg>' +
+                    "</button>"
+            },
+            clickContent: function clickContent(current, event) {
+                return current.type === "image" ? "zoom" : false;
+            },
+            onInit: function () {
+                header.css('transform', 'translateX(' + -calcScroll() / 2 + 'px)')
+            },
+            afterClose: function () {
+                header.css('transform', '')
+            }
+        });
+
+        $.fancybox.defaults.animationEffect = "circular";
+        $.fancybox.defaults.animationDuration = 500;
+    }
+    popup()
+    const dropdown = () => {
+        const elem = $('.header__user');
+        const dropdown = $('.header__dropdown')
+        elem.on('click', function (e) {
+            e.stopPropagation()
+            $(this).toggleClass('is-active')
+            $(this).find(dropdown).slideToggle()
+        })
+        $(document).on('click', function (e) {
+            const target = e.target
+            if (!dropdown.is(target) && dropdown.has(target).length === 0) {
+                dropdown.slideUp()
+                elem.removeClass('is-active')
+            }
+        })
+    }
+    dropdown()
 })
 const headerSticky = () => {
     let scrollPrev = 0;
-    let header = document.querySelector('.header.header--position')
+    let header = document.querySelector('.header')
     window.addEventListener('scroll', () => {
         let scrolled = window.scrollY;
         if(scrolled >= 100 && scrolled > scrollPrev) {
             header.style.top = -header.offsetHeight - 15 + 'px';
         } else if(scrolled === 0) {
-            header.style.top = 30 + 'px';
             header.classList.remove('header--sticky')
+            if(!header.classList.contains('header--top')) {
+                header.style.top = 30 + 'px';
+            } else {
+                header.style.top = 0;
+            }
         } else {
+            if(!header.classList.contains('header--top')) {
+                header.classList.add('header--sticky')
+            }
             header.style.top = 0;
-            header.classList.add('header--sticky')
         }
         scrollPrev = scrolled;
     });

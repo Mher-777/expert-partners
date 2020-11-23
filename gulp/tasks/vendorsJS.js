@@ -9,6 +9,7 @@ const vendorsScripts = [
   'dev/static/js/vendor/jquery-3.3.1.min.js',
   'dev/static/js/vendor/responsive.js',
   'node_modules/swiper/swiper-bundle.min.js',
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js'
 ];
 
 module.exports = function vendors(cb) {

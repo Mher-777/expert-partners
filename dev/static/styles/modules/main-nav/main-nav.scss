@@ -3,6 +3,79 @@
   &-mobile {
     display: none;
   }
+  &-personal {
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    transform: translateX(-100%);
+    top: 0;
+    background-color: red;
+    height: 100vh;
+    z-index: 1000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all linear .2s;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      mix-blend-mode: hard-light;
+      background-color: var(--color-accent);
+      z-index: -1;
+      left: 0;
+      top: 0;
+
+    }
+    &.is-open {
+      transform: translateX(0);
+    }
+    .menu {
+      margin-left: 0;
+      &-mobile {
+        &__header {
+          background-color: var(--color-accent);
+          padding: 7px 20px;
+          mix-blend-mode: hard-light;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin: 0 -20px;
+        }
+        &__logo {
+          max-width: 200px;
+          margin-right: 30px;
+        }
+        &__hamburger {
+          display: block;
+        }
+      }
+
+      &__list {
+        display: block;
+        margin-top: 30px;
+      }
+      &__item {
+        color: var(--color-white);
+        margin-bottom: 15px;
+        margin-right: 0;
+        display: flex;
+        max-width: 255px;
+        width: 100%;
+        margin-left: auto;
+      }
+      &__link {
+        width: auto;
+        display: inline-block;
+      }
+    }
+
+  }
   &__list {
     display: flex;
     align-items: center;
@@ -11,6 +84,16 @@
     margin-right: 75px;
     &:last-child {
       margin-right: 0;
+    }
+    &--weight {
+      font-weight: 700;
+      padding-left: 33px;
+    }
+    &-icon {
+      fill: var(--color-white);
+      width: 20px;
+      height: 20px;
+      margin-right: 13px;
     }
   }
   &__link {
@@ -105,6 +188,24 @@
     }
     &__link {
       width: 125px;
+    }
+  }
+  .menu-personal {
+    max-width: 400px;
+    .menu__item {
+      justify-content: flex-start;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .menu-personal {
+    max-width: 300px;
+    .menu__item {
+      justify-content: flex-start;
+      max-width: 200px;
+    }
+    .menu-mobile__logo {
+      max-width: 140px;
     }
   }
 }
