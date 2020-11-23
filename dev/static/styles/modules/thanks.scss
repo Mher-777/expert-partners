@@ -1,0 +1,81 @@
+.thanks {
+  position: relative;
+  background-color: var(--color-white);
+  &__decor {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-right: -50%;
+  }
+  &__icon {
+    width: 177px;
+    height: 177px;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 40px;
+    margin-top: 20px;
+  }
+  &__content {
+    min-height: calc(100vh - 80px);
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+    padding-top: 125px;
+  }
+  &__btn {
+    max-width: 210px;
+    display: block;
+    width: 100%;
+    margin: 40px auto 0;
+  }
+}
+@media (max-width: 600px) {
+  .thanks__decor {
+    width: 90%;
+  }
+  .thanks__content {
+    padding-top: 30%;
+  }
+  .thanks__icon {
+    width: 135px;
+    height: 135px;
+  }
+  .thanks__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 25px;
+  }
+  .thanks__content {
+    min-height: auto;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 500px) {
+  .thanks__icon {
+    width: 115px;
+    height: 115px;
+  }
+}
+@media (max-width: 400px) {
+  .thanks__title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 375px) {
+  .thanks__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .thanks__icon {
+    width: 90px;
+    height: 90px;
+  }
+  .thanks__btn {
+    margin-top: 30px;
+  }
+}

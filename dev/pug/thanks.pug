@@ -1,0 +1,13 @@
+extends layout/personal
+
+block variables
+    -var title = 'Жазылғыныңыз үшін рахмет!'
+
+block content
+  section.thanks
+    .container
+      .thanks__content
+        img(src="static/images/content/thanks/decor.svg" alt="decor").thanks__decor
+        +icon('letter', 'thanks__icon')
+        h2.thanks__title Жазылғыныңыз үшін рахмет!
+        a(href="index.html").btn.btn--color-black.thanks__btn Артқа оралу
