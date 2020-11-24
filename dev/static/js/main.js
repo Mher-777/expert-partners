@@ -199,7 +199,6 @@ $(function () {
         $(".js-btn-scroll").on('click', function(e) {
             e.preventDefault()
             const $this = $(this).attr('data-elem')
-            console.log($this)
             $('html, body').animate({
                 scrollTop: $($this).offset().top
             }, 1000);
