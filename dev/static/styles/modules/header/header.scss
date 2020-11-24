@@ -211,6 +211,9 @@ header { flex: 0 0 auto; }
   .header__right {
     display: none;
   }
+  .header__right--mobile-show {
+    display: flex;
+  }
   .header--top {
     padding-top: 35px;
     padding-bottom: 10px;
