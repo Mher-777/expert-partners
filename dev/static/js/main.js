@@ -191,6 +191,10 @@ $(function () {
         })
     }
     dropdown()
+    const mask = () => {
+        $(":input").inputmask();
+    }
+    mask()
 })
 const headerSticky = () => {
     let scrollPrev = 0;

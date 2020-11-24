@@ -202,6 +202,12 @@ $(function () {
   };
 
   dropdown();
+
+  var mask = function mask() {
+    $(":input").inputmask();
+  };
+
+  mask();
 });
 
 var headerSticky = function headerSticky() {

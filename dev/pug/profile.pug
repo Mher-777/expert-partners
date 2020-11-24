@@ -1,0 +1,37 @@
+extends layout/personal
+
+block variables
+	-var title = 'менің аккаунтым'
+
+block content
+	section.profile
+		.container
+			.section-top
+				h2.profile__title.title.title--size-small.title--color-accent менің аккаунтым
+				.info.info--bg-gray
+					+picture('static/images/common', 'user-yellow', ['webp', 'png'], 'info__pic')
+					.info__content
+						span.info__name
+							+icon('user', 'info__icon')
+							| Имя эксперта
+						p.info__text Курс басталуынан бастап
+							| 4 ай аралығында сізде барлық
+							|	сабақтарға доступ болады
+			.profile__content
+				form(action='/').profile__form
+					label.profile__control
+						span.profile__text Аты-жөні
+						input(type="text" placeholder="Атыңызды толтырыңыз").profile__input.input
+					label.profile__control
+						span.profile__text Email
+						input(type="text" data-inputmask="'alias': 'email'" placeholder="name@gmail.com").profile__input.input
+					label.profile__control
+						span.profile__text Телефон номері
+						input(type="tel" data-inputmask="'alias': '+7 999 9999 99 99'" placeholder="+7 7__ ___  __ __").profile__input.input
+					label.profile__control
+						span.profile__text Туған күн
+						input(type="text" data-inputmask="'alias': '99.99.9999'" placeholder="01.01.2020 ").profile__input.input
+					label.profile__control
+						span.profile__text Кұпия сөз
+						input(type="password" placeholder="Парольді теріңіз").profile__input.input
+					button(type="submit").btn.profile__btn.btn--size-small Сақтау

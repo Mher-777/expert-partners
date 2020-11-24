@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "inputmask": "^5.0.5",
     "normalize.css": "^8.0.1",
     "svg4everybody": "^2.1.9",
     "swiper": "^6.3.5"
