@@ -1,0 +1,28 @@
+extends layout/video
+
+block variables
+	-var title = 'КУрстың атауы'
+
+block content
+	section.courses.courses--white.courses--padding
+		.container
+			.section-top
+				h2.courses__title.title.title--size-small.title--color-accent менің курстарым
+				.info.info--bg-gray
+					+picture('static/images/common', 'user-yellow', ['webp', 'png'], 'info__pic')
+					.info__content
+						span.info__name
+							+icon('user', 'info__icon')
+							| Имя эксперта
+						p.info__text Курс басталуынан бастап
+							| 4 ай аралығында сізде барлық
+							|	сабақтарға доступ болады
+			.courses__subtitle.courses__subtitle--center Cабақ атауы
+			.courses__play
+				.courses__play-text Сабақ жайлы  ақпарат
+				//plugin documentation https://github.com/sampotts/plyr
+				.plyr__video-embed.courses__video#player
+					iframe(src="https://www.youtube.com/embed/bTqVqk7FSmY?origin=https://plyr.io&amp;iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allow="autoplay")
+block script
+	script.
+		const player = new Plyr('#player');

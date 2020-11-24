@@ -10,7 +10,8 @@ const vendorsScripts = [
   'dev/static/js/vendor/responsive.js',
   'node_modules/swiper/swiper-bundle.min.js',
   'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-  'node_modules/inputmask/dist/jquery.inputmask.js'
+  'node_modules/inputmask/dist/jquery.inputmask.js',
+  // 'node_modules/plyr/dist/plyr.min.js'
 ];
 
 module.exports = function vendors(cb) {

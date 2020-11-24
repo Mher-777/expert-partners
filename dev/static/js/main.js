@@ -195,6 +195,17 @@ $(function () {
         $(":input").inputmask();
     }
     mask()
+    const scrollToElem = () => {
+        $(".js-btn-scroll").on('click', function(e) {
+            e.preventDefault()
+            const $this = $(this).attr('data-elem')
+            console.log($this)
+            $('html, body').animate({
+                scrollTop: $($this).offset().top
+            }, 1000);
+        });
+    }
+    scrollToElem()
 })
 const headerSticky = () => {
     let scrollPrev = 0;

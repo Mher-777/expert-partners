@@ -10,13 +10,13 @@ header.header.header--position
         nav.menu(data-da="menu-mobile, last, 700")
           ul.menu__list
             li.menu__item
-              a(href="#").menu__link Біз жайлы
+              a(href="#" data-elem="#about").menu__link.js-btn-scroll Біз жайлы
             li.menu__item
-              a(href="#").menu__link эксперттер
+              a(href="#" data-elem="#team").menu__link.js-btn-scroll эксперттер
             li.menu__item
-              a(href="#").menu__link курстар
+              a(href="#" data-elem="#courses").menu__link.js-btn-scroll курстар
             li.menu__item
-              a(href="#").menu__link байланыс
+              a(href="#" data-elem=".footer").menu__link.js-btn-scroll байланыс
       .header__right
         a(href="#login" data-fancybox).header__user
           +icon('user', 'header__icon')
