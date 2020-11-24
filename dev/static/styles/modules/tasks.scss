@@ -1,0 +1,133 @@
+.tasks {
+  background-color: var(--color-white);
+  padding: 30px 0;
+  color: var(--color-black);
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-left: -25px;
+  }
+  &__col {
+    width: calc(50% - 25px);
+    margin-left: 25px;
+    border: 1px solid #F4F4F4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-white);
+    margin-bottom: 30px;
+    padding: 35px 30px;
+    font-size: 16px;
+    line-height: 22px;
+    &--height-auto {
+      align-self: baseline;
+    }
+  }
+  &__subtitle {
+    font-size: inherit;
+    font-weight: 700;
+    color: var(--color-black);
+  }
+  &__item {
+    margin-top: 20px;
+    &--numeric {
+      display: flex;
+      align-items: flex-start;
+      strong {
+        margin-right: 15px;
+      }
+    }
+    strong {
+      font-weight: 700;
+    }
+  }
+  &__quote {
+    padding-left: 42px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    font-family: 'Roboto-Italic', Arial, sans-serif;
+    display: block;
+    margin-top: 95px;
+  }
+}
+@media (max-width: 772px) {
+  .tasks__col {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 25px 20px;
+    width: calc(50% - 20px);
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  .tasks__row {
+    margin-left: -20px;
+  }
+  .tasks__quote {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 70px;
+  }
+  .tasks__item--numeric strong {
+    margin-right: 10px;
+  }
+  .tasks__quote {
+    padding-left: 35px;
+  }
+}
+@media (max-width: 650px) {
+  .tasks__col {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .tasks__item {
+    margin-top: 15px;
+  }
+  .tasks__quote {
+    font-size: 10px;
+    line-height: 13px;
+    padding-left: 30px;
+    margin-top: 50px;
+  }
+}
+@media (max-width: 550px) {
+  .tasks__col {
+    padding: 15px;
+    font-size: 10px;
+    line-height: 12px;
+    width: calc(50% - 15px);
+    margin-left: 15px;
+  }
+  .tasks__row {
+    margin-left: -15px;
+  }
+  .tasks__quote {
+    font-size: 9px;
+    line-height: 13px;
+    padding-left: 27px;
+    margin-top: 40px;
+  }
+  .tasks__subtitle {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+@media (max-width: 450px) {
+  .tasks__row {
+    margin-top: 20px;
+  }
+  .tasks {
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  .tasks__subtitle {
+    font-size: 9px;
+    line-height: 10px;
+  }
+  .tasks__col {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 9px;
+    line-height: 11px;
+    margin-bottom: 15px;
+  }
+}
